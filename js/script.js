@@ -3,7 +3,9 @@ let navLink = document.querySelectorAll('.nav-link');
 let logImg = document.getElementById('logImg');
 let navIcone = document.querySelectorAll('.navIcone a i');
 let heroLink = document.getElementById('heroLink');
+let showMore = document.getElementById('showMore');
 let drowpList = document.getElementById('drowpList');
+let dropdownMenu2 = document.getElementById('dropdownMenu2');
 let prodects = document.querySelectorAll('.swiper-slide img');
 
 window.onscroll = () => {
@@ -16,6 +18,7 @@ window.onscroll = () => {
     navIcone.forEach(e => {
       e.style.color = '#000';
     });
+    dropdownMenu2.classList.replace('text-white' , 'text-black')
   } else {
     nav.classList.remove('bg-white', 'bg-opacity-75');
     navLink.forEach(e => {
@@ -25,11 +28,19 @@ window.onscroll = () => {
     navIcone.forEach(e => {
       e.style.color = '#fff';
     });
+    dropdownMenu2.classList.replace(  'text-black' , 'text-white')
+
   }
 };
 
-const shopPage = () => {
+const showMoreItems=()=>{
   location.href = '/html/shop.html';
+
+
+}
+showMore.addEventListener('click' , showMoreItems)
+const shopPage = () => {
+  location.href = '/html/singlProdect.html';
 };
 prodects.forEach(e => {
   e.addEventListener('click', shopPage);
@@ -51,7 +62,7 @@ const rechengeLogo = () => {
 
 function getSlideNumber() {
   var windowWidth = window.innerWidth;
-  var direction = window.innerWidth <= 800 ? 1 : 3;
+  var direction = window.innerWidth <= 800 ? 1 : 4;
 
   return direction;
 }
@@ -65,8 +76,8 @@ var swiper = new Swiper('.mySwiper', {
     type: 'fraction',
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '#next',
+    prevEl: '#prev',
   },
 });
 

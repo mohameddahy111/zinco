@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap%27');
+
 body {
-  font-family: BAHIJ_THESANSARABIC-EXTRALIGHT;
+  font-family: 'Tajawal', sans-serif;
   direction: rtl;
 }
 
@@ -50,15 +52,98 @@ select:focus {
 .text-delevry span {
   font-size: 12px;
 }
-.prodect-i-heaart{
+.prodect-i-heaart {
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav-tabs .nav-link:focus ,.nav-tabs .nav-link:hover{
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
   border-radius: 20px;
   background-color: #f0c000;
+}
+.login-section {
+  width: 30%;
+  margin: auto;
+}
+.email-Box input ,.fName-Box input , .lastName-Box input {
+  width: 100%;
+}
+.password-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
 
+#password {
+  border: none;
+}
+#password:focus,
+#email:focus , #fName:focus ,#lastName:focus , #telephon:focus {
+  border: none;
+  outline: none;
+}
+.password-box i {
+  cursor: pointer;
+}
+#facebook {
+  background-color: #1b66ab;
+  color: #fff;
+}
+#google,
+#facebook {
+  width: 49%;
+  text-transform: capitalize;
+  justify-content: center;
+}
+#loginBtn {
+  width: 100%;
+}
+
+/***** cart-Page *****/
+.cari-icon{
+  width: 25%;
+
+
+}
+.cari-icon hr{
+  width:120px;
+}
+.icon-contanir{
+  width: 40px;
+  height: 40px;
+  
+  
+}
+.done{
+  background-color: #f0c000;
+
+}
+.swiper-btn{
+  position: absolute;
+  justify-content: space-between;
+  top: 40%;
+  left: 0;right: 0;
+  z-index: 4444;
+  transform: translatey(-50%);
+
+}
+
+/***** End cart-Page *****/
+
+@media screen and (max-width: 600px) {
+  .login-section {
+    width: 100%;
+    margin: auto;
+  }
+}
+@media screen and (min-width :601px) and (max-width :900px) {
+  .login-section {
+    width: 100%;
+    margin: auto;
+  }
+
+  
 }

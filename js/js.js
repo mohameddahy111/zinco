@@ -1,6 +1,6 @@
 function getSlideNumber() {
   var windowWidth = window.innerWidth;
-  var direction = window.innerWidth <= 800 ? 1 : 3;
+  var direction = window.innerWidth <= 800 ? 1 : 4;
 
   return direction;
 }
@@ -14,8 +14,8 @@ var swiper = new Swiper('.mySwiper', {
     type: 'fraction',
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '#next',
+    prevEl: '#prev',
   },
 });
 
