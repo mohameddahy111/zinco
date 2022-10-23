@@ -1,24 +1,32 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
-/* @import '/fonts/BAHIJ_THESANSARABIC-BLACK.TTF';
-@import '/fonts/BAHIJ_THESANSARABIC-BOLD.TTF';
-@import '/fonts/BAHIJ_THESANSARABIC-EXTRABOLD.TTF';
-@import '/fonts/BAHIJ_THESANSARABIC-EXTRALIGHT.TTF';
-@import '/fonts/BAHIJ_THESANSARABIC-LIGHT.TTF';
-@import '/fonts/BAHIJ_THESANSARABIC-PLAIN.TTF';
-@import '/fonts/BAHIJ_THESANSARABIC-SEMIBOLD.TTF';
-@import '/fonts/BAHIJ_THESANSARABIC-SEMILIGHT.TTF'; */
 @import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap%27');
 /* globel class */
 body {
- font-family: 'Tajawal', sans-serif;
+  font-family: 'Tajawal', sans-serif;
+}
+.span-text {
+  font-size: 13px;
+  line-height: 5px;
+}
+.icon-div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 99;
 }
 .swiper-container {
   width: 100%;
-  height: 90%;
+  height: 100%;
   direction: ltr;
 }
 
 .swiper-slide {
+  background-color: #f3f3f3;
   text-align: center;
   font-size: 18px;
   width: 100%;
@@ -44,14 +52,15 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
-.layer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.slide-img {
+  padding: 20px;
 }
+.slide-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
 .bg-f3 {
   background-color: #f3f3f3;
 }
@@ -143,6 +152,40 @@ nav a span {
   left: -20px;
   top: 50%;
 }
+.cartegre-list {
+  width: 60px;
+}
+.badges {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.new {
+  width: 90px;
+}
+.sold {
+  width: 100%;
+  left: 0;right: 0;
+}
+.cartegre-list {
+  cursor: pointer;
+}
+.cartegre-list::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(195, 193, 193, 0.315);
+  top: -15px;
+  right: -10px;
+  border-radius: 50%;
+  /* transform: translateY(-50%); */
+}
+.cartegre-list:hover.cartegre-list::after {
+  background-color: #f0c000;
+  z-index: -1;
+}
 .img-container::after {
   content: '';
   width: 50px;
@@ -156,6 +199,7 @@ nav a span {
 }
 .yallow::after {
   background-color: #f0c000;
+  z-index: -1;
 }
 .listItem {
   overflow-x: auto;
@@ -187,16 +231,24 @@ nav a span {
 .test {
   line-height: 0.5px;
 }
-.swiper-btn{
+.swiper-btn {
   position: absolute;
   justify-content: space-between;
   top: 40%;
-  left: 0;right: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
   transform: translatey(-50%);
-
 }
-
+.card-icon {
+  display: none;
+}
+.item:hover .card-icon {
+  display: flex;
+}
+.email-input input {
+  width: 300px;
+}
 
 @media screen and (max-width: 600px) {
   nav {
@@ -208,11 +260,24 @@ nav a span {
   nav a:not(.hero-menu-link) {
     color: #000 !important;
   }
+  .slider {
+    margin-top: 70px;
+  }
+  .mobil-slider img{
+    height:400px;
+  }
   .swiper-container {
     width: 100%;
     direction: ltr;
     margin-top: 30px;
   }
+  /* .textPosition button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
 
   .activeLine:focus:after {
     width: 25%;
@@ -220,19 +285,20 @@ nav a span {
     left: 0;
     /* transform: translatex(-50%); */
   }
-  
-  .hero-menu {
-    top: 100%;
-    z-index: 999;
-    height: 30vh;
-    overflow-y: scroll;
+  .textPosition button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .hero-menu::-webkit-scrollbar {
-    width: 0;
-  }
+
 
   .footer-Img img {
     height: 200px;
+  }
+  .footer-Img h3{
+    font-size: 16px;
   }
   .emailbox {
     top: 0;
@@ -253,25 +319,33 @@ nav a span {
   nav a:not(.hero-menu-link) {
     color: #000 !important;
   }
+  .slider {
+    margin-top: 70px;
+  }
+  .mobil-slider img{
+    height:400px;
+  }
 
   .activeLine:focus:after {
     width: 10%;
     bottom: 0;
     left: 0;
   }
-  .hero-menu {
-    top: 100%;
-    z-index: 999;
-    height: 30vh;
-    overflow-y: scroll;
-  }
-  .hero-menu::-webkit-scrollbar {
-    width: 0;
+  .textPosition button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-Img img {
     height: 200px;
   }
+  .footer-Img h3{
+    font-size: 16px;
+  }
+
   .emailbox {
     top: 0;
     transform: translateY(0);
@@ -294,6 +368,25 @@ nav a span {
     right: 80%;
     top: 85%;
   }
+  .textPosition button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobil-slider img{
+    height:400px;
+  }
+  .slider {
+    margin-top: 70px;
+  }
+
+
+  #showMore{
+    width: 120px;
+  }
+
   .footer-Img img {
     height: 200px;
   }
@@ -304,7 +397,8 @@ nav a span {
     align-items: center;
   }
   .email-input input,
-  button {
-    width: 50%;
+  .email-input button {
+    width: 100%;
+
   }
 }

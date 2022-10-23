@@ -3,10 +3,11 @@ let navLink = document.querySelectorAll('.nav-link');
 let logImg = document.getElementById('logImg');
 let navIcone = document.querySelectorAll('.navIcone a i');
 let heroLink = document.getElementById('heroLink');
-let showMore = document.getElementById('showMore');
+// let showMore = document.getElementById('showMore');
 let drowpList = document.getElementById('drowpList');
 let dropdownMenu2 = document.getElementById('dropdownMenu2');
 let prodects = document.querySelectorAll('.swiper-slide img');
+let siwper = document.querySelectorAll('.swiper-container');
 
 window.onscroll = () => {
   if (scrollY > 300) {
@@ -18,7 +19,7 @@ window.onscroll = () => {
     navIcone.forEach(e => {
       e.style.color = '#000';
     });
-    dropdownMenu2.classList.replace('text-white' , 'text-black')
+    dropdownMenu2.classList.replace('text-white', 'text-black');
   } else {
     nav.classList.remove('bg-white', 'bg-opacity-75');
     navLink.forEach(e => {
@@ -28,17 +29,13 @@ window.onscroll = () => {
     navIcone.forEach(e => {
       e.style.color = '#fff';
     });
-    dropdownMenu2.classList.replace(  'text-black' , 'text-white')
-
+    dropdownMenu2.classList.replace('text-black', 'text-white');
   }
 };
 
-const showMoreItems=()=>{
+$('#showMore').click(function () {
   location.href = '/html/shop.html';
-
-
-}
-showMore.addEventListener('click' , showMoreItems)
+});
 const shopPage = () => {
   location.href = '/html/singlProdect.html';
 };
@@ -62,56 +59,34 @@ const rechengeLogo = () => {
 
 function getSlideNumber() {
   var windowWidth = window.innerWidth;
-  var direction = window.innerWidth <= 800 ? 1 : 4;
+  if (windowWidth <= 700) {
+    return (direction = 1);
+  }
+  if (windowWidth <= 800) {
+    return (direction = 2);
+  }
+  if (windowWidth <= 1000) {
+    return (direction = 3);
+  }
+  if (windowWidth >= 1200) {
+    return (direction = 5);
+  }
+  // var direction = windowWidth <= 700 ? 1 :5;
 
   return direction;
 }
-var swiper = new Swiper('.mySwiper', {
-  
-  slidesPerView: getSlideNumber(),
-  centeredSlides: false,
-  spaceBetween: 10,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '#next',
-    prevEl: '#prev',
-  },
-});
-
-var appendNumber = 1;
-var prependNumber = 1;
-document
-  .querySelector('.prepend-2-slides')
-  .addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.prependSlide([
-      '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-      '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-    ]);
-  });
-document
-  .querySelector('.prepend-slide')
-  .addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.prependSlide(
-      '<div class="swiper-slide">Slide ' + --prependNumber + '</div>'
-    );
-  });
-document.querySelector('.append-slide').addEventListener('click', function (e) {
-  e.preventDefault();
-  swiper.appendSlide(
-    '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>'
-  );
-});
-document
-  .querySelector('.append-2-slides')
-  .addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.appendSlide([
-      '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-      '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-    ]);
+  siwper.forEach((x, index) => {
+    new Swiper(`.mySwiper-${index}`, {
+      slidesPerView: getSlideNumber(),
+      centeredSlides: false,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: `#next-${index}`,
+        prevEl: `#prev-${index}`,
+      },
+    });
   });

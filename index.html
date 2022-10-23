@@ -14,6 +14,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <!-- <link rel="stylesheet" href="css/hover-min.css"> -->
+    <link href="css/hover-min.css" rel="stylesheet" media="all" />
 
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
@@ -25,14 +27,16 @@
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="/img/Component 33 – 1.png" id="logImg" />
-            
           </a>
           <div class="d-flex align-items-center">
             <div class="navIcone d-md-none ms-2">
               <a href="" class="me-3 text-muted fs-5 text-decoration-none">
                 <i class="bi bi-search"></i>
               </a>
-              <a href="/html/cart.html" class="me-3 text-muted fs-5 text-decoration-none">
+              <a
+                href="/html/cart.html"
+                class="me-3 text-muted fs-5 text-decoration-none"
+              >
                 <i class="bi bi-cart2"></i>
               </a>
             </div>
@@ -82,34 +86,53 @@
               </li>
             </ul>
           </div>
-          <div class="navIcone d-none d-md-flex align-items-center  ">
+          <div class="navIcone d-none d-md-flex align-items-center">
             <a href="" class="me-3 text-white fs-5 text-decoration-none">
               <i class="bi bi-search"></i>
             </a>
-            <a href="html/cart.html" class="me-3 text-white fs-5 text-decoration-none ">
-              <div class="position-relative ">
+            <a
+              href="html/cart.html"
+              class="me-3 text-white fs-5 text-decoration-none"
+            >
+              <div class="position-relative">
                 <i class="bi bi-cart2 position-relative"></i>
-                <span class="badge bg-success position-absolute rounded-circle "> 1
+                <span class="badge bg-success position-absolute rounded-circle">
+                  1
                 </span>
-
               </div>
             </a>
             <div class="dropdown d-none d-lg-block">
-              <button class="btn text-white border-0 dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class=" bi bi-person" ></i>
+              <button
+                class="btn text-white border-0 dropdown-toggle"
+                type="button"
+                id="dropdownMenu2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person"></i>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-
                 <li>
                   <a href="/html/login.html" class="text-decoration-none">
-                    <button class="dropdown-item" type="button">تسجيل دخول</button>
+                    <button class="dropdown-item" type="button">
+                      تسجيل دخول
+                    </button>
                   </a>
-                  </li>
+                </li>
 
-                <li><button class="dropdown-item" type="button">Another action</button></li>
-                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                <li>
+                  <button class="dropdown-item" type="button">
+                    الملف الشخصي
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">
+                    تسجيل الخروج
+                  </button>
+                </li>
               </ul>
-            </div>          </div>
+            </div>
+          </div>
         </div>
         <div
           id="drowpList"
@@ -515,9 +538,70 @@
         </div>
       </nav>
       <div class="slider">
+        <div class="mobil-slider d-lg-none">
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active position-relative">
+                <img
+                  src="/img/TONIC-2.png"
+                  class="d-block w-100"
+                  height="650"
+                  alt="..."
+                />
+                <div class="position-absolute text-white textPosition w-25">
+                  <h2 class="fs-1 w-75">اصنع منزلك في المنزل</h2>
+                  <div class="mt-lg-4 d-flex align-items-center gap-2 me-lg-5">
+                    <button class="btn btn-primary rounded-circle me-3">
+                      <i class="fa fa-arrow-left"></i>
+                    </button>
+                    <span class="">تسوق الان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item position-relative">
+                <img
+                  src="/img/TONIC-3.png"
+                  class="d-block w-100"
+                  height="650"
+                  alt="..."
+                />
+                <div class="position-absolute text-white textPosition w-25">
+                  <h2 class="fs-1 w-75">اصنع منزلك في المنزل</h2>
+                  <div class="mt-lg-4 d-flex align-items-center gap-2 me-5">
+                    <button class="btn btn-primary rounded-circle me-3">
+                      <i class="fa fa-arrow-left"></i>
+                    </button>
+                    <span class="">تسوق الان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item position-relative">
+                <img
+                  src="/img/TONIC-1.png"
+                  class="d-block w-100"
+                  height="650"
+                  alt="..."
+                />
+                <div class="position-absolute text-white textPosition w-25">
+                  <h2 class="fs-1 w-75">اصنع منزلك في المنزل</h2>
+                  <div class="mt-lg-4 d-flex align-items-center gap-2 me-lg-5">
+                    <button class="btn btn-primary rounded-circle me-3">
+                      <i class="fa fa-arrow-left"></i>
+                    </button>
+                    <span class="">تسوق الان</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
           id="carouselExampleControlsNoTouching"
-          class="carousel slide"
+          class="carousel slide d-none d-lg-block"
           data-bs-touch="false"
           data-bs-interval="false"
         >
@@ -526,7 +610,7 @@
               <img
                 src="/img/TONIC-2.png"
                 class="d-block w-100"
-                height="450"
+                height="650"
                 alt="..."
               />
               <div class="position-absolute text-white textPosition w-25">
@@ -543,7 +627,7 @@
               <img
                 src="/img/TONIC-3.png"
                 class="d-block w-100"
-                height="450"
+                height="650"
                 alt="..."
               />
               <div class="position-absolute text-white textPosition w-25">
@@ -560,7 +644,7 @@
               <img
                 src="/img/TONIC-1.png"
                 class="d-block w-100"
-                height="450"
+                height="650"
                 alt="..."
               />
               <div class="position-absolute text-white textPosition w-25">
@@ -600,35 +684,54 @@
       <div
         class="bg-light position-absolute d-none align-items-center d-lg-flex bottom-0 w-75 borderRound container justify-content-evenly"
       >
-        <div class="d-flex align-items-center  justify-content-start position-relative">
-          <div class="p-2 bg-primary bg-opacity-25 ms-1 rounded-2">
+        <div
+          class="d-flex align-items-center p-3 justify-content-start position-relative"
+        >
+          <div class="p-2 ms-1 bg-primary bg-opacity-25 rounded-2">
             <img src="img/noun_guarantee_-1.png" alt="" />
           </div>
-          <div class="text-end pe-1 w-75">
+
+          <div class="text-end me-1 w-75">
             <p class="fw-bold test pt-3">امكانية الاستبدال</p>
-            <a href="" class="text-muted icon-text text-decoration-none">سياسة الاستبدال والاسترجاع</a>
+            <a class="text-muted icon-text text-decoration-none">
+              سياسة الاستبدال و الاسترجتع
+            </a>
           </div>
         </div>
-        <div class="d-flex align-items-center p-3  justify-content-start position-relative">
-          <div class="p-2 bg-primary bg-opacity-25 rounded-2">
+        <div
+          class="d-flex align-items-center p-3 justify-content-start position-relative"
+        >
+          <div class="p-2 bg-primary ms-1 bg-opacity-25 rounded-2">
             <img src="img/noun_Happy_1563582.png" alt="" />
           </div>
-          <div class="text-end w-75">
-            <p class="fw-bold test pt-3">كوبنات هداية</p>
+
+          <div class="text-end me-1 w-75">
+            <p class="fw-bold test pt-3">هدايا وكبونات</p>
             <span class="text-muted icon-text">
-              اراء عملائنا يتحدثون عن انفسهم و منتاجاتنا</span
-            >
+              العديد من الهدايا والكوبونات
+            </span>
           </div>
         </div>
-        <div class="d-flex align-items-center p-3  justify-content-start">
-          <div class="text-end w-75">
+        <div class="d-flex align-items-center p-3 justify-content-start">
+          <div class="p-2 bg-primary ms-1 bg-opacity-25 rounded-2">
+            <img src="img/Group 179.png" alt="" />
+          </div>
+
+          <div class="text-end me-1 w-75">
             <p class="fw-bold test pt-3">الشحن مجانا</p>
             <span class="text-muted icon-text">
               علي المشتريات التي تزيد عن 500 ريال</span
             >
           </div>
-          <div class="p-2 bg-primary bg-opacity-25 rounded-2">
-            <img src="img/noun_delivery_2057282.png" alt="" />
+        </div>
+        <div class="d-flex align-items-center p-3 justify-content-start">
+          <div class="p-2 bg-primary ms-1 bg-opacity-25 rounded-2">
+            <img src="img/Group -47.png" alt="" />
+          </div>
+
+          <div class="text-end me-1 w-75">
+            <p class="fw-bold test pt-3">امكانية التقسيط</p>
+            <span class="text-muted icon-text"> التقسيط علي 3 او 6 اشهر</span>
           </div>
         </div>
       </div>
@@ -646,8 +749,8 @@
             <div
               class="text-white position-absolute top-50 start-50 translate-middle-y me-5"
             >
-              <h5 class="w-75">اعادة تعريف تصميم عصري</h5>
-              <button class="btn btn-light bg-white rounded-5 py-2 px-4">
+              <h5 class="">اعادة تعريف تصميم عصري</h5>
+              <button class="btn btn-light bg-white rounded-5 py-2 px-lg-4">
                 اضهر المزيد
               </button>
             </div>
@@ -657,7 +760,7 @@
             <div
               class="text-white position-absolute top-50 end-50 translate-middle-y"
             >
-              <h5 class="w-75">مجموعة جديدة متوفرة في الوقت الحاضر</h5>
+              <h5 class="">مجموعة جديدة متوفرة في الوقت الحاضر</h5>
               <button class="btn btn-light bg-white rounded-5 py-2 px-4">
                 شاهد الان
               </button>
@@ -665,97 +768,528 @@
           </div>
         </div>
       </div>
+      <section>
+        <div class="container position-relative">
+          <div class="overflow-hidden position-relative mb-5">
+            <div class="swiper-container mySwiper-0 px-2">
+              <div class="swiper-wrapper mt-3">
+                <div class="swiper-slide hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Mask Group 40.png" class="w-100" alt="" />
+                    <p class="mt-2">انارة داخلية</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Path 353.png" class="w-100" alt="" />
+                    <p class="mt-2">ليات الزينة</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Path 350.png" class="w-100" alt="" />
+                    <p class="mt-2">انارة خارجية</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Group 489.png" class="w-100" alt="" />
+                    <span class="mt-2"> خلاطات واكسسوارات</span>
+                  </div>
+                </div>
+                <div class="swiper-slide mt-3 hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Group 498.png" class="w-100" alt="" />
+                    <p class="mt-2">المكيفات</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Group 488.png" class="w-100" alt="" />
+                    <p class="mt-2">كراسي الافرانجي</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Path 374.png" class="w-100" alt="" />
+                    <p class="mt-2">السخانات</p>
+                  </div>
+                </div>
+                <div class="swiper-slide mt-3 hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Path 392.png" class="w-100" alt="" />
+                    <p class="mt-2">المراوح</p>
+                  </div>
+                </div>
+                <div class="swiper-slide mt-3 hvr-wobble-horizontal">
+                  <div class="cartegre-list position-relative">
+                    <img src="/icon/Path 381.png" class="w-100" alt="" />
+                    <p class="mt-2">الدافايات</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-flex swiper-btn">
+            <i class="bi bi-arrow-right fs-5" id="next-0"></i>
+            <i class="bi bi-arrow-left fs-5" id="prev-0"> </i>
+          </div>
+        </div>
+      </section>
       <section class="">
         <div class="container d-flex justify-content-between">
           <div class="">
-            <h4 class="fw-semibold mb-5" >اختيارات من اجلك </h4>
+            <h4 class="fw-semibold mb-5">اختيارات من اجلك</h4>
           </div>
           <div class="">
-            <button class="btn border" id="showMore"> اظهر المزيد</button>
+            <button class="btn border" id="showMore">اظهر المزيد</button>
           </div>
         </div>
 
-        <div class="container position-relative ">
-          <div class=" overflow-hidden position-relative mb-5">
-            <div #swiperRef="" class="swiper-container mySwiper px-2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide ">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
-                      <img src="/img/IMG_7614.png" class="d-block w-100" alt="..." />
-                    </div>
-                    <div class="">
-                      <p>مغسلة</p>
-                      <p>1999.99</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
-                      <img src="/img/08-52-403 (1).png" class="d-block w-100" alt="..." />
-                    </div>
-                    <div class="">
-                      <p>مغسلة</p>
-                      <p>1999.99</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
+        <div class="container position-relative">
+          <div class="overflow-hidden position-relative mb-5">
+            <div class="swiper-container mySwiper-1 px-2">
+              <div class="swiper-wrapper position-relative">
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
                       <img
-                        src="/img/08-50-520.. (2).png"
-                        class="d-block w-100"
+                        src="/img/asset-7.png"
+                        class="position-relative"
                         alt="..."
+                        
                       />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="">
                       <p>مغسلة</p>
-                      <p>1999.99</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
                       <img
-                        src="/img/08-52-403 (1).png"
-                        class="d-block w-100"
+                        src="/img/asset-7.png"
+                        class="position-relative"
                         alt="..."
+                        
                       />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="">
                       <p>مغسلة</p>
-                      <p>1999.99</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
                       <img
-                        src="/img/03-520-19200 (4).png"
-                        class="d-block w-100"
+                        src="/img/asset-7.png"
+                        class="position-relative"
                         alt="..."
+                        
                       />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="">
                       <p>مغسلة</p>
-                      <p>1999.99</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
           </div>
           <div class="d-none d-md-flex swiper-btn">
-            <i class=" bi bi-arrow-right fs-5  " id="next"></i>
-            <i class="bi bi-arrow-left fs-5 " id="prev">
-            </i>
+            <i class="bi bi-arrow-right fs-5" id="next-1"></i>
+            <i class="bi bi-arrow-left fs-5" id="prev-1"> </i>
           </div>
-        </div>  
+        </div>
       </section>
 
       <section class="">
@@ -824,87 +1358,450 @@
           <h2>وصل حديثا</h2>
         </div>
 
-        <div class="container position-relative ">
-          <div class=" overflow-hidden position-relative mb-5">
-            <div #swiperRef="" class="swiper-container mySwiper px-2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide ">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
-                      <img src="/img/IMG_7614.png" class="d-block w-100" alt="..." />
-                    </div>
-                    <div class="">
-                      <p>مغسلة</p>
-                      <p>1999.99</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
-                      <img src="/img/08-52-403 (1).png" class="d-block w-100" alt="..." />
-                    </div>
-                    <div class="">
-                      <p>مغسلة</p>
-                      <p>1999.99</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
+        <div class="container position-relative">
+          <div class="overflow-hidden position-relative mb-5">
+            <div class="swiper-container mySwiper-1 px-2">
+              <div class="swiper-wrapper position-relative">
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
                       <img
-                        src="/img/08-50-520.. (2).png"
-                        class="d-block w-100"
+                        src="/img/asset-7.png"
+                        class="position-relative"
                         alt="..."
+                        
                       />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="">
                       <p>مغسلة</p>
-                      <p>1999.99</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
                       <img
-                        src="/img/08-52-403 (1).png"
-                        class="d-block w-100"
+                        src="/img/asset-7.png"
+                        class="position-relative"
                         alt="..."
+                        
                       />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="">
                       <p>مغسلة</p>
-                      <p>1999.99</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="item text-center pb-3">
-                    <div class="bg-f3 mb-3">
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
                       <img
-                        src="/img/03-520-19200 (4).png"
-                        class="d-block w-100"
+                        src="/img/asset-7.png"
+                        class="position-relative"
                         alt="..."
+                        
                       />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="">
                       <p>مغسلة</p>
-                      <p>1999.99</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide hvr-bounce-out position-relative">
+                  <div class="item text-center pb-3 position-relative">
+                    <div class="mb-3 bg-f3 slide-img position-relative">
+                      <img
+                        src="/img/asset-7.png"
+                        class="position-relative"
+                        alt="..."
+                        
+                      />
+                      <div
+                        class=" card-icon position-absolute top-0 me-2 end-0 flex-column align-items-end gap-2 pe-3 pt-3"
+                      >
+                        <div class="icon-div">
+                          <i class="bi bi-eye"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="icon-div">
+                          <i class="bi bi-cart3"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <p>مغسلة</p>
+                      <p class="text-muted span-text">رقم الصنف 2344</p>
+                      <div
+                        class="d-flex flex-lg-row-reverse justify-content-center gap-2"
+                      >
+                        <span>4345</span>
+                        <span>ر.س</span>
+                      </div>
+                      <div class="text-warning">
+                        <i class="bi bi-truck"></i>
+                        <span> الشحن مجاني</span>
+                      </div>
+                    </div>
+                    <div class="badges">
+                      <div class="new">
+                        <!-- <img src="/icon/pngwing-ph.com (3).png" alt="" class="w-100 " /> -->
+                      </div>
+                      <div class="sold">
+                        <img src="/icon/sold.png" alt="" class="w-100" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
           </div>
           <div class="d-none d-md-flex swiper-btn">
-            <i class=" bi bi-arrow-right fs-5  " id="next"></i>
-            <i class="bi bi-arrow-left fs-5 " id="prev">
-            </i>
+            <i class="bi bi-arrow-right fs-5" id="next-1"></i>
+            <i class="bi bi-arrow-left fs-5" id="prev-1"> </i>
           </div>
-        </div>  
+        </div>
       </section>
     </main>
     <footer>
@@ -913,11 +1810,11 @@
           <div class="footer-Img position-relative">
             <img
               src="/img/apartment-clean-condominium-279719.png"
-              class="w-100 "
+              class="w-100"
               alt=""
             />
             <div
-              class="position-absolute emailbox px-5 d-flex flex-lg-row flex-column-reverse justify-content-between w-100"
+              class="position-absolute emailbox px-5 d-flex align-items-center flex-lg-row flex-column-reverse justify-content-between w-100"
             >
               <h3 class="text-white">
                 اشترك في النشرة الإخبارية لدينا تلقي عروض حصرية
@@ -1034,41 +1931,21 @@
                   <img src="/img/playstor.png" class="app-img" alt="" />
                 </a>
               </div>
-              <div class="iconSocial my-3 w-75">
-                <ul
-                  class="list-unstyled d-flex justify-content-md-around justify-content-between align-items-center"
+              <div class="mt-2">
+                <img src="/img/Component 38 – 1.png" alt="" class="w-100" />
+              </div>
+              <div
+                class="mt-2 d-flex justify-content-center align-items-center"
+              >
+                <div class="d-flex justify-content-center ms-4">
+                  <img src="/img/surface-9.png" alt="" class="w-100" />
+                  <img src="/img/untitled-2-12.png" alt="" class="w-100" />
+                </div>
+                <div
+                  class="border border-2 border-bottom-0 border-top-0 border-start-0"
                 >
-                  <li>
-                    <a href="" class="text-muted fs-5 ms-2">
-                      <i class="bi bi-snapchat"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="text-muted fs-5 ms-2">
-                      <i class="bi bi-instagram"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="text-muted fs-5 ms-2">
-                      <i class="bi bi-whatsapp"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="text-muted fs-5 ms-2">
-                      <i class="bi bi-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="text-muted fs-5 ms-2">
-                      <i class="bi bi-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="text-muted fs-5 ms-2">
-                      <i class="bi bi-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
+                  <img src="/img/MAROOF-6.png" alt="" class="w-100" />
+                </div>
               </div>
             </div>
           </div>
@@ -1078,7 +1955,48 @@
       <section
         class="text-center text-muted d-flex align-items-center justify-content-center border border-start-0 border-end-0 border-bottom-0"
       >
-        <p>جميع الحقوق محفوظة لشركة Zinco © 2022</p>
+        <div
+          class="d-flex flex-column text-center flex-lg-row justify-content-between py-3 align-items-center w-50 m-auto"
+        >
+          <div class="iconSocial">
+            <ul
+              class="list-unstyled d-flex justify-content-md-center justify-content-between align-items-center"
+            >
+              <li>
+                <a href="" class="text-muted fs-5 ms-2">
+                  <i class="bi bi-snapchat"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="text-muted fs-5 ms-2">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="text-muted fs-5 ms-2">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="text-muted fs-5 ms-2">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="text-muted fs-5 ms-2">
+                  <i class="bi bi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" class="text-muted fs-5 ms-2">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <p>جميع الحقوق محفوظة لشركة Zinco © 2022</p>
+        </div>
       </section>
     </footer>
 
